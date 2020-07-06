@@ -4,6 +4,7 @@ metadata:
   name: nginx-service
 spec:
   #to connect to the deployment in label in metadata .
+  type: NodePort
   selector:
     app: nginx
   ports: 
@@ -11,3 +12,6 @@ spec:
     port: 80
     #should match the container port .
     targetPort: 8080
+
+
+
