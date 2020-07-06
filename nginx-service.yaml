@@ -4,7 +4,7 @@ metadata:
   name: nginx-service
 spec:
   #to connect to the deployment in label in metadata .
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: nginx
   ports: 
