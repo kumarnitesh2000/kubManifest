@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sketchdepl
+  labels:
+    app: sketch
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sketch
+  template:
+    metadata:
+      labels:
+        app: sketch
+    spec:
+      containers:
+        - name: sketch
+          image: kumarnitesh2000/sketch_backend:yahh
+          ports:
+            - containerPort: 5000
+
+
+    
+  
