@@ -8,11 +8,12 @@ spec:
   storageClassName: manual
   capacity: 
     storage: 1Gi
-  acessModes: ReadWriteMany
+  accessModes: 
+    - ReadWriteMany
   nfs: 
     server: <nfs-server-ip>
     #this path is the path to directory in the server side
-    path: "/mnt/private"
+    path: "/path/to/dir"
 
 
 
