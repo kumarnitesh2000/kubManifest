@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata: 
+  name: pv-nfs
+  labels: 
+    key: value
+spec:
+  storageClassName: manual
+  capacity: 
+    storage: 1Gi
+  acessModes: ReadWriteMany
+  nfs: 
+    server: <nfs-server-ip>
+    #this path is the path to directory in the server side
+    path: "/mnt/private"
+
+
+
