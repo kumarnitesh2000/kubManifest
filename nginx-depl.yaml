@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  #metadat have the labes (key[app] - value[nginx] ) Pair.
+  #this is labels is used by the service .
+  labels: 
+    app: nginx
+spec:
+  #Note that only spec will have the selectors .
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template: 
+    metadata:
+      #for giving the pod a label .
+      #this label is matched with the selectors section
+      #to connect with the particular deployment. 
+      labels:
+        app: nginx
+    #blueprint of the Pod .    
+    spec:
+      containers: 
+      - name: nginx
+        image: nginx:1.16.0
+        ports: 
+        - containerPort: 80 
+      
+
+
+
+

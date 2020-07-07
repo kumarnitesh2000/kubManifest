@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  #to connect to the deployment in label in metadata .
+  selector:
+    app: nginx
+  ports: 
+  - protocol: TCP 
+    port: 80
+    #should match the container port .
+    targetPort: 8080
