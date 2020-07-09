@@ -26,13 +26,14 @@ spec:
         image: nginx:1.16.0
         ports: 
         - containerPort: 80
-        volumeMounts:
-          - name: pvhostpathu
-            mountPath: "/usr/share/nginx/html"
-      volumes:
-        - name: pvhostpathu
-          persistentVolumeClaim: 
-            claimName: pvchostpathu      
+        #mount the volume if pv and pvc available.
+        #volumeMounts:
+          #- name: pvhostpathu
+            #mountPath: "/usr/share/nginx/html"
+      #volumes:
+        #- name: pvhostpathu
+          #persistentVolumeClaim: 
+            #claimName: pvchostpathu      
 
       
 
