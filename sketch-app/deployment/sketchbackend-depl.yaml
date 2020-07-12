@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: sketch
-          image: kumarnitesh2000/sketch_backend:yahh
+          image: kumarnitesh2000/sketch_backend:from-jen
           ports:
             - containerPort: 5000
 
