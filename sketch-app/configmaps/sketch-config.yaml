@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata: 
+  name: sketch-config
+data:
+  key1: "value"
+  key2: "value"
+  link: "https://www.flyploader.live/media/files/index_VP2zbo2.html"
+
+
+
+
+
+
+
+
