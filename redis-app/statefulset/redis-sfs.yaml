@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: redis-sfs
+spec:
+  selector: 
+    matchLabels: 
+      app: exampleapp
+  serviceName: redis    
+  replicas: 1
+  template: 
+    metadata:
+      labels: 
+        app: exampleapp
+    spec:
+      containers: 
+        - name: redis
+          image: redis:5.0.1-alpine
+          ports:
+            - containerPort: 6379
+              name: redis        
