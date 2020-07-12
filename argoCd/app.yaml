@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: example-app
+  name: sketch
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/kumarnitesh2000/kubManifest.git
     targetRevision: HEAD
-    path: kubManifest/sketch-app
+    path: /sketch-app
     directory:
       recurse: true
   destination:
