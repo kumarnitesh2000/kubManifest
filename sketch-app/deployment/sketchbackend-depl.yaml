@@ -18,9 +18,18 @@ spec:
       containers:
         - name: sketch
           image: kumarnitesh2000/sketch_backend:from-jen
+          env:
+          - name: link
+            valueFrom: 
+              configMapKeyRef:
+                name: sketch-config
+                key: link
           ports:
             - containerPort: 5000
 
 
-    
-  
+
+
+
+
+
