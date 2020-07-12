@@ -11,5 +11,4 @@ spec:
   accessModes: 
     - ReadWriteOnce
   hostPath:
-    path: "/f/kube"    
-
+    path: "/static"
