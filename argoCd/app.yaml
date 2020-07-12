@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/kumarnitesh2000/kubManifest.git
     targetRevision: HEAD
-    path: /sketch-app
+    path: sketch-app
     directory:
       recurse: true
   destination:
