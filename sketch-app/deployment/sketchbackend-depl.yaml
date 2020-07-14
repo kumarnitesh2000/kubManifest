@@ -29,8 +29,8 @@ spec:
         name: redispy
         volumeMounts:
         - mountPath: /data
-          name: pvhostpath
+          name: pv-hostpath
       volumes:
-      - name: pvhostpath
+      - name: pv-hostpath
         persistentVolumeClaim:
           claimName: pvchostpath
