@@ -21,7 +21,7 @@ spec:
             configMapKeyRef:
               key: link
               name: sketch-config
-        image: kumarnitesh2000/sketch_backend:61d9f7a
+        image: kumarnitesh2000/sketch_backend:4be7a16
         name: sketch
         ports:
         - containerPort: 5000
