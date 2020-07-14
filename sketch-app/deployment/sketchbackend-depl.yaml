@@ -25,3 +25,5 @@ spec:
         name: sketch
         ports:
         - containerPort: 5000
+      - image: redis
+        name: redispy
