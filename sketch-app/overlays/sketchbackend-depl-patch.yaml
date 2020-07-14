@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: sketch
+  name: sketchdepl
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: sketch
+      containers:
+      - image: kumarnitesh2000/sketch_backend:yahh
+        name: sketch
