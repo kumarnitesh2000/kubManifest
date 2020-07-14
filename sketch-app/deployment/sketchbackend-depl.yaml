@@ -1,10 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sketchdepl
   labels:
     app: sketch
-
+  name: sketchdepl
 spec:
   replicas: 2
   selector:
@@ -16,20 +15,13 @@ spec:
         app: sketch
     spec:
       containers:
-        - name: sketch
-          image: kumarnitesh2000/sketch_backend:from-jen
-          env:
-          - name: link
-            valueFrom: 
-              configMapKeyRef:
-                name: sketch-config
-                key: link
-          ports:
-            - containerPort: 5000
-
-
-
-
-
-
-
+      - env:
+        - name: link
+          valueFrom:
+            configMapKeyRef:
+              key: link
+              name: sketch-config
+        image: kumarnitesh2000/sketch_backend:3e0bcv
+        name: sketch
+        ports:
+        - containerPort: 5000
