@@ -27,10 +27,10 @@ spec:
         - containerPort: 5000
       - image: redis
         name: redispy
-        #volumeMounts:
-          #- name: pvhostpathu
-            #mountPath: "/data"
-      #volumes:
-        #- name: pvhostpathu
-          #persistentVolumeClaim: 
-            #claimName: pvchostpathu
+        volumeMounts:
+          - name: pvhostpath
+            mountPath: "/data"
+      volumes:
+        - name: pvhostpath
+          persistentVolumeClaim: 
+            claimName: pvchostpath
