@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: sketchfrontend
 spec:
-  type: LoadBalance
+  type: LoadBalancer
   #or type: NodePort
   selector:
-    app: sketch
+    app: sketchfront
   ports:
   - protocol: TCP
     port: 5000 
