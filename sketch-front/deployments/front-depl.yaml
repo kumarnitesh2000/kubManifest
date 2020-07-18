@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
-  name: sketchfrontend
+  name: sketchfront
   labels: 
     app: sketchfront
 spec:
