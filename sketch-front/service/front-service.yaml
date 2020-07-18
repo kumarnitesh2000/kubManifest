@@ -6,7 +6,7 @@ spec:
   type: LoadBalancer
   #or type: NodePort
   selector:
-    app: sketchfront
+    app: sketchfrontend
   ports:
   - protocol: TCP
     port: 5000 
