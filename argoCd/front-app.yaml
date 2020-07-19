@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sketchfrontend
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/kumarnitesh2000/kubManifest.git
+    targetRevision: HEAD
+    path: sketch-front
+    directory:
+      recurse: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: sketchfront
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: false  
