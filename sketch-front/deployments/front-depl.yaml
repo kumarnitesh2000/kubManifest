@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: kumarnitesh2000/sketch_frontend:bec31b8
+        image: kumarnitesh2000/sketch_frontend:1e9a971
         ports:
         - containerPort: 5000
           
