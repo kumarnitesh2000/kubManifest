@@ -12,7 +12,7 @@ spec:
   template: 
     metadata:
       labels: 
-        app: sketchfrontend
+        app: sketchfront
     spec:
       containers:
       - name: frontend
