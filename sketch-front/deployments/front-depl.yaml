@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: sketchfrontend
+  labels: 
+    app: sketchfront
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
+      app: sketchfront
+  template: 
+    metadata:
+      labels: 
+        app: sketchfrontend
+    spec:
+      containers:
+      - name: frontend
+        image: kumarnitesh2000/sketch_frontend:ffcd22d
+        ports:
+          containerPort: 5000
+          
+        
